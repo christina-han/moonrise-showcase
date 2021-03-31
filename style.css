@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none!important;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #fffcf5;
+    overflow: hidden;
+}
+.container-items{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: unset;
+}
+
+.item{
+    position: relative;
+    flex-grow: 1;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 200px;
+    transition: all 0.3s ease-in-out;
+    flex-wrap: wrap;
+}
+.item:hover{
+    flex-grow: 2;
+    font-size: 400px;
+}
+h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(38, 38, 38);
+}
+
+img{
+    width: 100%;
+}
+.container-img-wrap{
+    position: absolute;
+    top: -50rem;
+    left: -80px;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 10;
+}
+.container-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+@media(max-width: 900px){
+    .container-items{
+        height: 100px;
+    }
+    .item{
+        font-size: 20px;
+    }
+    .item:hover{
+        flex-grow: 1;
+        font-size: 20px;
+    }
+    .container-img-wrap{
+        display: none;
+    }
+    .navbar{
+        display: none!important;
+    }
+}
+
+.site-logo{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    line-height: 100px;
+    text-transform: uppercase;
+    color: rgb(227, 78, 132);
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    line-height: 100px;
+}
+
+.site-menu{
+    display: flex;
+}
+.menu-item{
+    position: relative;
+}
+.menu-item::before{
+    content: '';
+    position: absolute;
+    border: 2px solid #2a69fe;
+    width: 100px;
+    height: 40px;
+    top: 5%;
+    left: -24%;
+    border-radius: 50%;
+}
+.header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 20%;
+    padding: 40px;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 40px;
+    z-index: 2;
+}
+
+.header-left span{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.link{
+    margin: 40px 0;
+}
+.link a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #1d1d1d;
+}
